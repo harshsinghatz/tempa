@@ -1,4 +1,4 @@
-import {isHash, isWhiteSpace,isLetter,isNewLine,isNumber} from '../utils/identify';
+import {isHash, isWhiteSpace,isLetter,isNewLine,isNumber,isQuote} from '../utils/identify';
 import TOKENS,{Token} from '../utils/token';
 
 const tokenize=(code:string):Token[]=>{
@@ -11,6 +11,20 @@ const tokenize=(code:string):Token[]=>{
 
       // Skip newline/whitespace character
       if(isWhiteSpace(char) || isNewLine(char)){
+        pointer++;
+        continue;
+      }
+
+      // Tokenize the blockquote
+      if(isQuote(char)){
+        // Till the end of the line get the sentence
+
+        let quote="";
+        while((isLetter(code[++pointer]) || isWhiteSpace(code[pointer]) || isNumber(code[pointer])) && !(isNewLine(code[pointer]))){
+          quote+=code[pointer];
+        }
+
+        tokens.push(TOKENS.QUOTE(quote));
         pointer++;
         continue;
       }

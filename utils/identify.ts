@@ -12,3 +12,5 @@ export const isLetter=curriedFunc(/[a-zA-Z]/);
 export const isNewLine=curriedFunc(/\n/);
 
 export const isNumber= curriedFunc(/[0-9]/);
+
+export const isQuote=curriedFunc(/[>]/);

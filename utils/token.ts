@@ -22,6 +22,12 @@ const TOKENS={
       type:"Paragraph",
       value:paragraph
     }
+  },
+  QUOTE(quote:string):Token{
+    return{
+      type:"Quote",
+      value: quote
+    }
   }
 }
 
