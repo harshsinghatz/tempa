@@ -13,7 +13,8 @@
     "lerna": "^6.0.3"
   },
   "scripts": {
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "clean": "rd /s /q 'node_modules' && del package-lock.json"
   },
   "dependencies": {
     "ts-node": "^10.9.1"
