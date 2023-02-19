@@ -17,6 +17,7 @@
     "clean": "rd /s /q 'node_modules' && del package-lock.json"
   },
   "dependencies": {
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "@tempa/parser": "1.0.0"
   }
 }
