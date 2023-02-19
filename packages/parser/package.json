@@ -2,7 +2,7 @@
   "name": "@tempa/parser",
   "version": "1.0.0",
   "description": "This is a template compiler for converting templates to static html",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "types": "dist/index.d.ts",
   "directories": {
     "test": "test"
